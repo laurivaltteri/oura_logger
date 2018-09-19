@@ -6,7 +6,7 @@ import dateutil.parser
 # ISO 8601 time format = "%Y-%m-%dT%H:%M:%S%z"
 
 # get the access_token from config file
-
+import config
 
 # get user information (all of us are 40 yrs old males)
 url = "https://api.ouraring.com/v1/userinfo?access_token="+config.TOKEN
