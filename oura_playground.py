@@ -23,7 +23,7 @@ url = "https://api.ouraring.com/v1/sleep?start=" + \
 
 response = requests.get(url)
 parsed = response.json()
-parsed['sleep'][0]['bedtime_start'][0:10] # check that the data is loaded
+#parsed['sleep'][0]['bedtime_start'][0:10] # check that the data is loaded
 #parsed['sleep'][0].keys() # check the keys for the data fetched
 
 # function to calculate time of sleep midpoint
@@ -39,3 +39,5 @@ list(bedtime_midpoint(parsed['sleep']))
 # loop that prints average HR for each night
 for item in parsed['sleep']:
     print(item['bedtime_start'][0:10]+': '+str(item['hr_average']))
+
+parsed['sleep'][6]['hr_5min']
