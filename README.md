@@ -6,4 +6,4 @@ This example is utilizing server-side (explicit) flow. Implicit flow would be so
 * `python oura_server.py`
 * Open http://localhost:65010/ in a browser and click to get a token
 * Insert token to config.py
-* Play with your data (examples at `oura.py`)
+* Play with your data (examples at `oura_playground.py`)
