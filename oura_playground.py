@@ -18,6 +18,9 @@ daycount = 7
 lastdate = str(date.today() - timedelta(days=daycount))
 nowdate = str(date.today())
 
+lastdate = '2018-09-23'
+nowdate = '2018-09-26'
+
 url = "https://api.ouraring.com/v1/sleep?start=" + \
     lastdate + "&end=" + nowdate + "&access_token=" + config.TOKEN
 
@@ -25,6 +28,9 @@ response = requests.get(url)
 parsed = response.json()
 #parsed['sleep'][0]['bedtime_start'][0:10] # check that the data is loaded
 #parsed['sleep'][0].keys() # check the keys for the data fetched
+
+with open('/Users/laurivaltteri/Google Drive/Takeout/Oura/20180923.json', 'w') as outfile:
+    json.dump(parsed, outfile)
 
 # function to calculate time of sleep midpoint
 def bedtime_midpoint(data):
