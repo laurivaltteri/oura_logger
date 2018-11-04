@@ -9,6 +9,8 @@ import dateutil.parser
 import config
 
 # get user information (all of us are 40 yrs old males)
+# USE THIS TO TEST THAT TOKEN PROVIDED BY OAUTH IS VALID
+# SHOULD RETURN json WITH 'age', 'date': '2018-10-31', 'email', gender', 'height': 176, 'user_id', AND 'weight': 75
 url = "https://api.ouraring.com/v1/userinfo?access_token="+config.TOKEN
 response = requests.get(url)
 response.json()

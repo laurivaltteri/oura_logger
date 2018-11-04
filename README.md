@@ -3,7 +3,7 @@ This example is utilizing server-side (explicit) flow. Implicit flow would be so
 
 * First go to https://cloud.ouraring.com/oauth/applications and create a new application
 * Insert provided information to config_sample.py and rename it to config.py
-* `python oura_server.py`
+* `python oura_server.py` (requires 'flask' install it using pip, conda, etc.)
 * Open http://localhost:65010/ in a browser and click to get a token
-* Insert token to config.py
-* Play with your data (examples at `oura_playground.py`)
+* Copy-paste token from browser to config.py
+* Play with your data (example lines at `oura_playground.py`) (requires at least 'json' formatting and html 'requests', install via pgkmanager)
